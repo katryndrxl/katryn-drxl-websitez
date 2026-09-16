@@ -418,22 +418,18 @@ video {
 ======================================== */
 
 .gallery {
-
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
-    gap: 24px;
+    gap: 36px 86px;
+    max-width: 780px;
+    margin: 0 auto;
 }
 
 .gallery-card {
-
-    border: 2px dashed #dcaeb5;
-
+    border: 1.5px dashed #e3aeb6;
     border-radius: 14px;
-
-    background: #fbe1e5;
-
+    background: #fffafa;
+    padding: 8px;
     overflow: hidden;
 
     transition:
@@ -442,28 +438,46 @@ video {
 }
 
 .gallery-card:hover {
-
     transform: translateY(-5px);
-
     box-shadow: 5px 5px 0 #e3aeb6;
 }
 
 .gallery-card img {
-
     display: block;
-
     width: 100%;
-
-    height: 320px;
-
+    height: 185px;
     object-fit: cover;
+    border-radius: 8px;
 
     transition: transform 0.3s ease;
 }
 
 .gallery-card:hover img {
-
     transform: scale(1.03);
+}
+
+/* Center the third card */
+.gallery-card:nth-child(3) {
+    grid-column: 1 / -1;
+    width: 52%;
+    justify-self: center;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .gallery-card:nth-child(3) {
+        grid-column: auto;
+        width: auto;
+    }
+
+    .gallery-card img {
+        height: 220px;
+    }
 }
 
 
