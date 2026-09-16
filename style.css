@@ -417,53 +417,38 @@ video {
    GALLERY
 ======================================== */
 
-.gallery {
-
+.gallery-grid {
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
-    gap: 24px;
+    gap: 28px;
+    align-items: start;
 }
 
-.gallery-card {
-
+.gallery-item {
+    background: #fff;
     border: 2px dashed #dcaeb5;
-
     border-radius: 14px;
-
-    background: #fbe1e5;
-
+    padding: 10px;
     overflow: hidden;
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.gallery-card:hover {
-
-    transform: translateY(-5px);
-
-    box-shadow: 5px 5px 0 #e3aeb6;
+.gallery-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 6px 6px 0 #e3aeb6;
 }
 
-.gallery-card img {
-
+.gallery-item img {
     display: block;
-
     width: 100%;
-
-    height: 320px;
-
+    aspect-ratio: 16 / 9;
     object-fit: cover;
-
+    border-radius: 8px;
     transition: transform 0.3s ease;
 }
 
-.gallery-card:hover img {
-
-    transform: scale(1.03);
+.gallery-item:hover img {
+    transform: scale(1.02);
 }
 
 
