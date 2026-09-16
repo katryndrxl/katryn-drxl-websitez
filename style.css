@@ -433,7 +433,7 @@ video {
     border-radius: 14px;
 
     background: #fbe1e5;
-
+    padding: 10px;
     overflow: hidden;
 
     transition:
@@ -451,13 +451,11 @@ video {
 .gallery-card img {
 
     display: block;
-
     width: 100%;
-
-    height: 320px;
-
+    height: 300px;
     object-fit: cover;
-
+    border-radius: 8px;
+   
     transition: transform 0.3s ease;
 }
 
